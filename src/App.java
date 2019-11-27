@@ -1,8 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
-
+	
+	
 	public static void main(String[] args) {
-
+		
+		exibeCabecalhoObrigatorio();
 		
 		//Estagio Obrigatório
 		EstagioObrigatorio eo = new EstagioObrigatorio("Sistema WEB ABC"," Andamento","2019/2",0);
@@ -12,7 +16,6 @@ public class App {
 		eo.setEmp(e);
 		Curso c1 = new Curso("Computação",1,"Bacharel",8);
 		eo.setC(c1);
-		eo.exibeEstagio();
 		eo.exibeStatus();
 		
 		EstagioObrigatorio eo2 = new EstagioObrigatorio("App Negócios IAC","Concluído","2019/1",9.5);
@@ -26,12 +29,17 @@ public class App {
 		
 		//Estagio Profissional
 		
+		exibeCabecalhoProfissional();
+		
 		EstagioProfissional ep = new EstagioProfissional("App Dev","Andamento",2500.00);
 		Aluno a3 = new Aluno("Beto", 20193,"beto@uniritter.com.br");
 		ep.setAl(a3);
 		ep.setEmp(e);
 		ep.setC(c2);
-		ep.exibeEstagio();
+		List<Area> areas = new ArrayList <Area>();
+		areas.add(new Area ("BD,","Banco de dados"));
+		areas.add(new Area ("IA","Inteligencia artificial"));
+		ep.setAreas(areas);
 		ep.exibeStatus();
 		
 		EstagioProfissional ep2 = new EstagioProfissional("Suporte","Concluído",1800.00);
@@ -40,9 +48,24 @@ public class App {
 		ep2.setEmp(e2);
 		Curso c3 = new Curso("            GTI",3,"Tecnólogo",6);
 		ep2.setC(c3);
+		List<Area> areas2 = new ArrayList <Area>();
+		areas2.add(new Area ("ITIL",""));
+		ep2.setAreas(areas2);
 		ep2.exibeStatus();
 		
 
+	}
+	
+	//Metodos para gerar cabeçalho
+	
+	public static void exibeCabecalhoObrigatorio() {
+		System.out.println("Estágio Obrigatório");
+		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    Semestre" + "  Nota" + "  Empresa" + "       Curso");
+	}
+	
+	public static void exibeCabecalhoProfissional() {
+		System.out.println("\nEstágio Profissional");
+		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    R$" + "        Empresa" + "           Curso" + "     Áreas");
 	}
 
 }

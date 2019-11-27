@@ -1,3 +1,4 @@
+import java.util.List;
 
 public class Estagio {
 	
@@ -6,12 +7,20 @@ public class Estagio {
 	private Empresa emp;
 	private Aluno al;
 	private Curso c;
-	private Area ar[] = new Area[2];
+	private List<Area> areas;
 	
 	public Estagio() {
 		
 	}
 	
+	public List<Area> getAreas() {
+		return areas;
+	}
+
+	public void setAreas(List<Area> areas) {
+		this.areas = areas;
+	}
+
 	public Curso getC() {
 		return c;
 	}
@@ -54,13 +63,6 @@ public class Estagio {
 		this.al = al;
 	}
 
-	public Area[] getAr() {
-		return ar;
-	}
-
-	public void setAr(Area ar[]) {
-		this.ar = ar;
-	}
 	
 	
 

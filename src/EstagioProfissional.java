@@ -19,15 +19,16 @@ public class EstagioProfissional extends Estagio {
 		this.valorRemuneracao = valorRemuneracao;
 	}
 	
-	public void exibeEstagio() {
-		System.out.println("\nEstágio Profissional");
-		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    R$" + "        Empresa" + "           Curso");
-	}
+	
 	
 	public void exibeStatus() {
+		String areas = "";
+		for(int i=0;i< getAreas().size();i++) {
+			areas=areas + " " + getAreas().get(i).getSigla();
+		}
 		
 		System.out.println(getAl().getNome() + "  " + getTitulo() + "           " + getSituacao() + "   " + 
-		                   getValorRemuneracao() + "    " + getEmp().getNome() + getC().getNome() );
+		                   getValorRemuneracao() + "    " + getEmp().getNome() + getC().getNome() +  "      " + areas);
 	}
 	
 	
