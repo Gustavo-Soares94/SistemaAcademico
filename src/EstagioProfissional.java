@@ -22,6 +22,7 @@ public class EstagioProfissional extends Estagio {
 	
 	
 	public void exibeStatus() {
+		//Possibilidade de associar mais de uma Área de TI a um estágio
 		String areas = "";
 		for(int i=0;i< getAreas().size();i++) {
 			areas=areas + " " + getAreas().get(i).getSigla();

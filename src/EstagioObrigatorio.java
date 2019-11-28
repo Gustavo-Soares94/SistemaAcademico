@@ -29,16 +29,20 @@ public class EstagioObrigatorio extends Estagio {
 	}
 	
 
-	
 	public void exibeStatus() {
+		//Possibilidade de associar mais de uma Área de TI a um estágio
+		String areas = "";
+		for(int i=0;i< getAreas().size();i++) {
+			areas=areas + " " + getAreas().get(i).getSigla();
+		}
 		
 		//Condicao para retornar nota
 		if (getSituacao() == "Concluído") {
 			System.out.println(getAl().getNome() + "   " + getTitulo() + "  " + getSituacao() + "   " + getSemestre() + " "
-			           + "   " + getNotaFinal() + "   " + getEmp().getNome() + "  "+ getC().getNome());
+			           + "   " + getNotaFinal() + "   " + getEmp().getNome() + "  "+ getC().getNome() +  "           " + areas);
 		}else {
 			System.out.println(getAl().getNome() + "   " + getTitulo() + "  " + getSituacao() + "   " + getSemestre() + " "
-			           + "         " + getEmp().getNome() + "  "+ getC().getNome() );
+			           + "         " + getEmp().getNome() + "  "+ getC().getNome() +  "    " + areas);
 		}
 		
 	}

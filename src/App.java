@@ -16,6 +16,9 @@ public class App {
 		eo.setEmp(e);
 		Curso c1 = new Curso("Computação",1,"Bacharel",8);
 		eo.setC(c1);
+		List<Area> areas = new ArrayList <Area>();
+		areas.add(new Area ("DEV",""));
+		eo.setAreas(areas);
 		eo.exibeStatus();
 		
 		EstagioObrigatorio eo2 = new EstagioObrigatorio("App Negócios IAC","Concluído","2019/1",9.5);
@@ -25,6 +28,9 @@ public class App {
 		eo2.setEmp(e2);
 		Curso c2 = new Curso("      ADS",2,"Tecnólogo",6);
 		eo2.setC(c2);
+		List<Area> areas2 = new ArrayList <Area>();
+		areas2.add(new Area ("MOB",""));
+		eo2.setAreas(areas2);
 		eo2.exibeStatus();
 		
 		//Estagio Profissional
@@ -36,10 +42,10 @@ public class App {
 		ep.setAl(a3);
 		ep.setEmp(e);
 		ep.setC(c2);
-		List<Area> areas = new ArrayList <Area>();
-		areas.add(new Area ("BD,","Banco de dados"));
-		areas.add(new Area ("IA","Inteligencia artificial"));
-		ep.setAreas(areas);
+		List<Area> areas3 = new ArrayList <Area>();
+		areas3.add(new Area ("BD,","Banco de dados"));
+		areas3.add(new Area ("IA","Inteligencia artificial"));
+		ep.setAreas(areas3);
 		ep.exibeStatus();
 		
 		EstagioProfissional ep2 = new EstagioProfissional("Suporte","Concluído",1800.00);
@@ -48,9 +54,9 @@ public class App {
 		ep2.setEmp(e2);
 		Curso c3 = new Curso("            GTI",3,"Tecnólogo",6);
 		ep2.setC(c3);
-		List<Area> areas2 = new ArrayList <Area>();
-		areas2.add(new Area ("ITIL",""));
-		ep2.setAreas(areas2);
+		List<Area> areas4 = new ArrayList <Area>();
+		areas4.add(new Area ("ITIL",""));
+		ep2.setAreas(areas4);
 		ep2.exibeStatus();
 		
 
@@ -60,7 +66,7 @@ public class App {
 	
 	public static void exibeCabecalhoObrigatorio() {
 		System.out.println("Estágio Obrigatório");
-		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    Semestre" + "  Nota" + "  Empresa" + "       Curso");
+		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    Semestre" + "  Nota" + "  Empresa" + "       Curso" + "          Áreas");
 	}
 	
 	public static void exibeCabecalhoProfissional() {
