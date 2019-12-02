@@ -5,8 +5,7 @@ public class EstagioProfissional extends Estagio {
 	
 
 	public EstagioProfissional(String titulo,String situacao, double valorRemuneracao) {
-		super();
-		setTitulo(titulo);
+		super(titulo);
 		setSituacao(situacao);
 		this.valorRemuneracao = valorRemuneracao;
 	}

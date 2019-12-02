@@ -5,8 +5,7 @@ public class EstagioObrigatorio extends Estagio {
 	private double notaFinal;
 	
 	public EstagioObrigatorio(String titulo,String situacao, String semestre,double notaFinal) {
-		super();
-		setTitulo(titulo);
+		super(titulo);
 		setSituacao(situacao);
 		this.semestre = semestre;
 		this.notaFinal = notaFinal;

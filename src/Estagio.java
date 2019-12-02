@@ -9,8 +9,9 @@ public class Estagio {
 	private Curso c;
 	private List<Area> areas;
 	
-	public Estagio() {
+	public Estagio(String titulo) {
 		
+		this.titulo = titulo;
 	}
 	
 	public List<Area> getAreas() {

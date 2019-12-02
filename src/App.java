@@ -43,7 +43,8 @@ public class App {
 		ep.setEmp(e);
 		ep.setC(c2);
 		List<Area> areas3 = new ArrayList <Area>();
-		areas3.add(new Area ("BD,","Banco de dados"));
+		// -> Prof aqui vou inserir virgula para separar as duas áreas do estágio ;)
+		areas3.add(new Area ("BD, ","Banco de dados"));
 		areas3.add(new Area ("IA","Inteligencia artificial"));
 		ep.setAreas(areas3);
 		ep.exibeStatus();
@@ -59,6 +60,23 @@ public class App {
 		ep2.setAreas(areas4);
 		ep2.exibeStatus();
 		
+		
+		//Versão dos relatórios organizados por empresa;
+		
+		exibeCabecalhoEmpresas();
+		Empresa emp = new Empresa("New TI","      Porto Alegre");
+		List<Estagio> estagios  = new ArrayList <Estagio>();
+		estagios.add(new Estagio("Sistema WEB ABC, "));
+		estagios.add(new Estagio("Suporte"));
+		emp.setEstagios(estagios);
+		emp.exibeStatusEmpresa();
+		
+		Empresa emp2 = new Empresa("A&D Soluções","Canoas");
+		List<Estagio> estagios2  = new ArrayList <Estagio>();
+		estagios2.add(new Estagio("      APP Negócios IAC,"));
+		estagios2.add(new Estagio("APP Dev"));
+		emp2.setEstagios(estagios2);
+		emp2.exibeStatusEmpresa();
 
 	}
 	
@@ -73,5 +91,12 @@ public class App {
 		System.out.println("\nEstágio Profissional");
 		System.out.println("\nAluno" + " Titulo" + "            Situação" + "    R$" + "        Empresa" + "           Curso" + "     Áreas");
 	}
+	
+	public static void exibeCabecalhoEmpresas() {
+		System.out.println("\n\nRelatório por Empresas ");
+		System.out.println("\nNome" + "           Endereço"  + "        Estágios");
+		 
+	}
+	
 
 }
